@@ -435,6 +435,17 @@
 body {
   background-color: var(--md-sys-color-background);
   color: var(--md-sys-color-on-background);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+header {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
 h1 {
   color: var(--md-sys-color-on-primary);

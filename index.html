@@ -8,33 +8,40 @@
     <title>Personlig data-dashboard</title>
   </head>
   <body>
-    <h1>Velkommen til ditt personlige data-dashboard</h1>
-    <p>
-      Her kan du se og administrere din personlige informasjon relatert til
-      bøker.
-    </p>
-    <h2>Boklogg</h2>
-    <form>
-      <label for="title">Tittel:</label>
-      <input type="text" id="title" placeholder="tittel" required />
-      <label for="author">Forfatter:</label>
-      <input type="text" id="author" placeholder="forfatter" required />
-      <label for="genre">Sjanger:</label>
-      <input type="text" id="genre" placeholder="sjanger" required />
-      <label for="year">Utgivelsesår:</label>
-      <input type="number" id="year" placeholder="utgivelsesår" required />
-      <button type="submit">Oppdater informasjon</button>
-    </form>
-    <section>
-      <h2>Din informasjon</h2>
-      <form>
-        <label for="name">Navn:</label>
-        <input type="text" id="name" placeholder="navn" required />
-        <label for="email">E-post:</label>
-        <input type="email" id="email" placeholder="e-post" required />
-        <button type="submit">Lagre</button>
-      </form>
-    </section>
+    <header>
+      <h1>Velkommen til ditt personlige datadashboard</h1>
+      <p>
+        Her kan du se og administrere din personlige informasjon relatert til
+        bøker.
+      </p>
+    </header>
+    <main>
+      <section>
+        <h2>Boklogg</h2>
+        <form>
+          <label for="title">Tittel:</label>
+          <input type="text" id="title" placeholder="tittel" required />
+          <label for="author">Forfatter:</label>
+          <input type="text" id="author" placeholder="forfatter" required />
+          <label for="genre">Sjanger:</label>
+          <input type="text" id="genre" placeholder="sjanger" required />
+          <label for="year">Utgivelsesår:</label>
+          <input type="number" id="year" placeholder="utgivelsesår" required />
+          <button type="submit">Oppdater informasjon</button>
+        </form>
+      </section>
+      <section>
+        <h2>Din informasjon</h2>
+        <form>
+          <label for="name">Navn:</label>
+          <input type="text" id="name" placeholder="navn" required />
+          <label for="email">E-post:</label>
+          <input type="email" id="email" placeholder="e-post" required />
+          <button type="submit">Lagre</button>
+        </form>
+        <h2>Test heading</h2>
+      </section>
+    </main>
   </body>
   <script src="script.js"></script>
 </html>
