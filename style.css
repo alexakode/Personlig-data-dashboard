@@ -448,3 +448,7 @@ p {
   color: var(--md-sys-color-surface);
   background-color: var(--md-sys-color-on-surface);
 }
+form {
+  color: var(--md-sys-color-on-surface-container);
+  background-color: var(--md-sys-color-surface-container);
+}
