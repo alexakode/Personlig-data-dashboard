@@ -432,6 +432,10 @@
     );
   }
 }
+body {
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+}
 h1 {
   color: var(--md-sys-color-on-primary);
   background-color: var(--md-sys-color-primary);
@@ -441,6 +445,6 @@ h2 {
   background-color: var(--md-sys-color-secondary);
 }
 p {
-  color: var(--md-sys-color-background);
-  background-color: var(--md-sys-color-on-background);
+  color: var(--md-sys-color-surface);
+  background-color: var(--md-sys-color-on-surface);
 }

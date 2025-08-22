@@ -27,8 +27,13 @@
     </form>
     <section>
       <h2>Din informasjon</h2>
-      <p>Navn: <span id="display-name"></span></p>
-      <p>E-post: <span id="display-email"></span></p>
+      <form>
+        <label for="name">Navn:</label>
+        <input type="text" id="name" placeholder="navn" required />
+        <label for="email">E-post:</label>
+        <input type="email" id="email" placeholder="e-post" required />
+        <button type="submit">Lagre</button>
+      </form>
     </section>
   </body>
   <script src="script.js"></script>
