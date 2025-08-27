@@ -61,12 +61,35 @@ function saveBook(book) {
   return books;
 }
 function displayBooks() {
-  const books = JSON.parse(localStorage.getItem("books")) || [];
+  let books = JSON.parse(localStorage.getItem("books")) || [];
+
+  const genreFilter = document
+    .querySelector("#genreFilter")
+    .value.trim()
+    .toLowerCase();
+  if (genreFilter) {
+    books = books.filter((book) =>
+      book.genre.toLowerCase().includes(genreFilter)
+    );
+  }
+  const sortOption = document.querySelector("#sortOption").value;
+  switch (sortOption) {
+    case "title":
+      books.sort((a, b) => a.title.localeCompare(b.title));
+      break;
+    case "author":
+      books.sort((a, b) => a.author.localeCompare(b.author));
+      break;
+    case "year":
+      books.sort((a, b) => a.year - b.year);
+      break;
+  }
+
   const list = document.querySelector("#book-list");
   list.innerHTML = "";
   books.forEach((book) => {
     const item = document.createElement("li");
-    item.textContent = `${book.title} av ${book.author}`;
+    item.textContent = `${book.title} av ${book.author} er en ${book.genre}bok utgitt i ${book.year}.`;
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Slett";
     deleteButton.addEventListener("click", () => {
@@ -90,3 +113,8 @@ function deleteBook(bookId) {
   localStorage.setItem("books", JSON.stringify(updatedBooks));
   displayBooks();
 }
+document.querySelector("#delete-book").addEventListener("click", () => {
+  const bookId = document.querySelector("#book-id").value;
+  deleteBook(bookId);
+});
+document.querySelector("#genreFilter").addEventListener("input", displayBooks);

@@ -18,6 +18,16 @@
     <main>
       <section>
         <h2>Boklogg</h2>
+        <div class="controls">
+          <label for="sortOption">Sorter</label>
+          <select id="sortOption">
+            <option value="title">Tittel</option>
+            <option value="author">Forfatter</option>
+            <option value="year">Utgivelsesår</option>
+          </select>
+          <label for="genreFilter">Filtrer etter sjanger:</label>
+          <input type="text" id="genreFilter" placeholder="sjanger" />
+        </div>
         <ul id="book-list"></ul>
         <form>
           <label for="title">Tittel:</label>
@@ -52,8 +62,9 @@
             placeholder="utgivelsesår"
             required
           />
-          <button type="submit">Oppdater informasjon</button>
+          <button type="submit">Legg til bok</button>
           <button type="button" id="delete-book">Slett bok</button>
+        </form>
       </section>
       <section>
         <h2>Din informasjon</h2>
