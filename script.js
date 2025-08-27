@@ -89,7 +89,8 @@ function displayBooks() {
   list.innerHTML = "";
   books.forEach((book) => {
     const item = document.createElement("li");
-    item.textContent = `${book.title} av ${book.author} er en ${book.genre}bok utgitt i ${book.year}.`;
+    const statusText = book.status === "read" ? " har lest." : " vil lese";
+    item.textContent = `${book.title} av ${book.author} er en ${book.genre}bok utgitt i ${book.year} som jeg ${statusText}.`;
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Slett";
     deleteButton.addEventListener("click", () => {
