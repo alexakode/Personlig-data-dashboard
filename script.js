@@ -104,6 +104,7 @@ function displayBooks() {
     list.appendChild(item);
   });
 }
+document.querySelector("#sortOption").addEventListener("change", displayBooks);
 document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
