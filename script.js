@@ -72,6 +72,10 @@ function displayBooks() {
       book.genre.toLowerCase().includes(genreFilter)
     );
   }
+  const statusFilter = document.querySelector("#status").value;
+  if (statusFilter) {
+    books = books.filter((book) => book.status === statusFilter);
+  }
   const sortOption = document.querySelector("#sortOption").value;
   switch (sortOption) {
     case "title":
@@ -89,7 +93,7 @@ function displayBooks() {
   list.innerHTML = "";
   books.forEach((book) => {
     const item = document.createElement("li");
-    const statusText = book.status === "read" ? " har lest." : " vil lese";
+    const statusText = book.status === "read" ? " har lest" : " vil lese";
     item.textContent = `${book.title} av ${book.author} er en ${book.genre}bok utgitt i ${book.year} som jeg ${statusText}.`;
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Slett";

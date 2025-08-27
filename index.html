@@ -10,9 +10,7 @@
   <body>
     <header>
       <h1>Velkommen til ditt personlige datadashboard</h1>
-      <p>
-        Her kan du se og administrere bøker du har lest.
-      </p>
+      <p>Her kan du se og administrere bøker du har lest.</p>
     </header>
     <main>
       <section>
@@ -26,6 +24,12 @@
           </select>
           <label for="genreFilter">Filtrer etter sjanger:</label>
           <input type="text" id="genreFilter" placeholder="sjanger" />
+          <label for="status">Filtrer etter status:</label>
+          <select id="status">
+            <option value="">Alle</option>
+            <option value="read">Har lest</option>
+            <option value="wishlist">Vil lese</option>
+          </select>
         </div>
         <ul id="book-list"></ul>
         <form>
