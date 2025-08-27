@@ -1,15 +1,18 @@
 {
   "folders": [
-	{
-		"path": "."
-	},
-	{
-		"path": "../../../../Downloads/material-theme-user-data/css"
-	},
-	{
-		"path": "../portfolio"
-	}
-],
+    {
+      "path": "."
+    },
+    {
+      "path": "../../../../Downloads/material-theme-user-data/css"
+    },
+    {
+      "path": "../portfolio"
+    },
+    {
+      "path": "../javascript-advanced"
+    }
+  ],
   "settings": {
     "liveServer.settings.multiRootWorkspaceName": "Personlig data dashboard"
   }
