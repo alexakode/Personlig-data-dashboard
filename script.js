@@ -118,3 +118,4 @@ document.querySelector("#delete-book").addEventListener("click", () => {
   deleteBook(bookId);
 });
 document.querySelector("#genreFilter").addEventListener("input", displayBooks);
+document.querySelector("#sortOption").addEventListener("change", displayBooks);
