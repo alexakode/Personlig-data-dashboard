@@ -86,7 +86,7 @@
       oklch(0.8 0.075 210)
     );
     --md-sys-color-on-primary-container: light-dark(
-      oklch(oklch(1 0.03 210)),
+      oklch(1 0.03 210),
       oklch(0.15 0.03 210)
     );
     --md-sys-color-secondary: light-dark(
@@ -299,10 +299,7 @@
       oklch(0.975 0.006 210),
       oklch(0.185 0.009 210)
     );
-    --md-sys-color-on-surface: light-dark(
-      oklch(0.175 0.009 210),
-      oklch(1 0 0)
-    );
+    --md-sys-color-on-surface: light-dark(oklch(0.175 0.009 210), oklch(1 0 0));
     --md-sys-color-surface-variant: light-dark(
       oklch(0.9125 0.01 210),
       oklch(0.4 0.01 210)
