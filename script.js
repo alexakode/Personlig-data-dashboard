@@ -104,7 +104,6 @@ function displayBooks() {
     list.appendChild(item);
   });
 }
-document.querySelector("#sortOption").addEventListener("change", displayBooks);
 document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
@@ -113,6 +112,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
   saveBook(book);
   displayBooks();
 });
+document.querySelector("#sortOption").addEventListener("change", displayBooks);
 function deleteBook(bookId) {
   const books = JSON.parse(localStorage.getItem("books")) || [];
   const updatedBooks = books.filter((book) => book.id !== bookId);
